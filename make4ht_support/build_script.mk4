@@ -7,7 +7,6 @@ else
   Make:htlatex()
   Make:htlatex()
 end
-Make:image("png$",
-"dvipng -bg Transparent -T tight -o ${output}  -pp ${page} ${source}")
+Make:image("png$", "dvipng -bg Transparent -T tight -o ${output}  -pp ${page} ${source}")
 Make:match("html$",process)
 Make:match("html$", "tidy -m -xml -utf8 -q -i ${filename}")
